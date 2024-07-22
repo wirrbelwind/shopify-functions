@@ -3,8 +3,6 @@ import type {
   FunctionRunResult,
   Discount,
   Target,
-  CartLine,
-  Cart
 } from "../generated/api";
 import {
   DiscountApplicationStrategy,
@@ -13,14 +11,7 @@ import {
   MURANO_DISCOUNT_PERCENT_VALUE,
   MURANO_DISCOUNT_TEXT
 } from './constants'
-
-
-type Configuration = {};
-
-const validateMuranoProduct = (line) => {
-  console.log(line.attribute)
-  return line.attribute?.key === "_murano_product" && line.quantity > 1
-}
+import { validateMuranoProduct } from "./helpers/validateMuranoProduct";
 
 export function run(input: RunInput): FunctionRunResult {
   const lineTargets: Target[] = input.cart.lines
