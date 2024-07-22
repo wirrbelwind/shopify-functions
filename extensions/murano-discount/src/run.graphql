@@ -1,7 +1,12 @@
 query RunInput {
-  discountNode {
-    metafield(namespace: "$app:murano-discount", key: "function-configuration") {
-      value
+  cart {
+    lines {
+      id,
+      attribute(key: "_murano_product") {
+        key,
+        value
+      },
+      quantity
     }
   }
 }

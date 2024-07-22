@@ -8,7 +8,8 @@
 					"totalAmount": 10
 				},
 				"attribute": {
-					"_murano_product": true
+					"key": "_murano_product",
+					"value": true
 				}
 			},
 			{
@@ -18,10 +19,10 @@
 					"totalAmount": 100
 				},
 				"attribute": {
-					"_murano_product": true
+					"key": "_murano_product",
+					"value": true
 				}
 			},
-
 			{
 				"id": "line-item-with-1-murano-products",
 				"quantity": 1,
@@ -29,19 +30,17 @@
 					"totalAmount": 100
 				},
 				"attribute": {
-					"_murano_product": true
+					"key": "_murano_product",
+					"value": true
 				}
 			},
-
 			{
 				"id": "line-item-without-murano-products",
 				"quantity": 3,
 				"cost": {
 					"totalAmount": 10
 				},
-				"attribute": {
-					
-				}
+				"attribute": {}
 			}
 		]
 	},

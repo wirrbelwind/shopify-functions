@@ -3,7 +3,8 @@ import type {
   FunctionRunResult,
   Discount,
   Target,
-  CartLine
+  CartLine,
+  Cart
 } from "../generated/api";
 import {
   DiscountApplicationStrategy,
@@ -16,17 +17,15 @@ import {
 
 type Configuration = {};
 
-const validateMuranoProduct = (line: CartLine) => {
-  return line.attribute?.["_murano_product"] && line.quantity > 1
+const validateMuranoProduct = (line) => {
+  console.log(line.attribute)
+  return line.attribute?.key === "_murano_product" && line.quantity > 1
 }
 
 export function run(input: RunInput): FunctionRunResult {
-  const configuration: Configuration = JSON.parse(
-    input?.discountNode?.metafield?.value ?? "{}"
-  );
   const lineTargets: Target[] = input.cart.lines
     .filter(validateMuranoProduct)
-    .map((line: CartLine) => ({
+    .map((line) => ({
       cartLine: {
         id: line.id,
         quantity: line.quantity
