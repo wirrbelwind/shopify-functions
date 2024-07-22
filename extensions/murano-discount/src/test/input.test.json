@@ -1,0 +1,53 @@
+{
+	"cart": {
+		"lines": [
+			{
+				"id": "line-item-with-3-murano-products",
+				"quantity": 3,
+				"cost": {
+					"totalAmount": 10
+				},
+				"attribute": {
+					"_murano_product": true
+				}
+			},
+			{
+				"id": "line-item-with-7-murano-products",
+				"quantity": 7,
+				"cost": {
+					"totalAmount": 100
+				},
+				"attribute": {
+					"_murano_product": true
+				}
+			},
+
+			{
+				"id": "line-item-with-1-murano-products",
+				"quantity": 1,
+				"cost": {
+					"totalAmount": 100
+				},
+				"attribute": {
+					"_murano_product": true
+				}
+			},
+
+			{
+				"id": "line-item-without-murano-products",
+				"quantity": 3,
+				"cost": {
+					"totalAmount": 10
+				},
+				"attribute": {
+					
+				}
+			}
+		]
+	},
+	"discountNode": {
+		"metafield": {
+			"value": "{\"example_config\": \"value\"}"
+		}
+	}
+}

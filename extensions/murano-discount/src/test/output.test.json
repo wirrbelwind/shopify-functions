@@ -1,0 +1,27 @@
+{
+	"discountApplicationStrategy": "FIRST",
+	"discounts": [
+		{
+			"message": "25% off on sets",
+			"targets": [
+				{
+					"cartLine": {
+						"id": "line-item-with-3-murano-products",
+						"quantity": 3
+					}
+				},
+				{
+					"cartLine": {
+						"id": "line-item-with-7-murano-products",
+						"quantity": 7
+					}
+				}
+			],
+			"value": {
+				"percentage": {
+					"value": 25
+				}
+			}
+		}
+	]
+}
